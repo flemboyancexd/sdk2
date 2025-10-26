@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDK/2</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter as a modern default, but specify a strong monospace fallback for the retro look -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        /* Custom styles for the retro terminal feel */
+        body {
+            font-family: 'Inter', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background-color: #0d1117; /* GitHub Dark Mode background */
+        }
+        
+        .retro-glow {
+            text-shadow: 0 0 5px #a7f3d0, 0 0 10px #34d399; /* Subtle neon green glow */
+        }
+        
+        /* Blinking Cursor Animation */
+        .cursor {
+            display: inline-block;
+            width: 8px; /* Width of the cursor */
+            height: 1.2em; /* Height should match line height/font size */
+            background-color: #10b981; /* Neon green cursor color */
+            margin-left: 4px;
+            vertical-align: middle;
+            animation: blink 1s infinite steps(1, start);
+        }
+
+        @keyframes blink {
+            0%, 100% { background-color: #10b981; }
+            50% { background-color: transparent; }
+        }
+
+        .container-card {
+            border: 2px solid #374151; /* Subtle border for terminal window feel */
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); /* Outer glow effect */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main Retro Container Card -->
+    <div class="container-card bg-gray-800 bg-opacity-90 max-w-2xl w-full p-8 md:p-12 rounded-lg shadow-2xl transition-all duration-300">
+        
+        <!-- Header: The SDK Name -->
+        <header class="text-center mb-10">
+            <h1 class="text-6xl md:text-8xl font-bold text-emerald-400 retro-glow uppercase tracking-wider">
+                SDK/2
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mt-2 font-mono">
+                PenguinMod SDK from the last generation.
+            </p>
+        </header>
+
+        <!-- Main Content: Coming Soon Message -->
+        <main class="text-center font-mono">
+            <div class="text-left bg-gray-900 p-6 rounded-md border border-gray-700">
+                <p class="text-lg text-lime-300 mb-4 leading-relaxed">
+                    <span class="text-cyan-400">STATUS:</span> Mocking OS/2... ...complete
+                </p>
+                <p class="text-4xl md:text-5xl font-bold text-green-500 mb-6">
+                    <span class="text-lime-400">C O M I N G</span> <span class="text-green-300">S O O N</span><span class="cursor"></span>
+                </p>
+                <p class="text-gray-400 text-sm">
+                    A powerful, simplified toolset designed for creative expression within PenguinMod.
+                    <br>
+                    Prepare for a blast from the past.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer: GitHub Link -->
+        <footer class="mt-10 text-center font-mono text-sm text-gray-500">
+            <p>
+                Watch this space for updates.
+                <a href="#" class="text-teal-400 hover:text-teal-300 transition-colors underline ml-1">
+                    [ G I T H U B . I O / F L E M B O Y A N C E X D / S D K 2 ]
+                </a>
+            </p>
+            <p class="mt-2 text-xs text-gray-600">
+                A project by PenguinMod Community (*someone).
+            </p>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>
